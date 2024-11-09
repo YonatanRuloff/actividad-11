@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad11</title>
+</head>
+<body>
+    <h1>Guía de JavaScript</h1>
+    
+    <h2>1. Variables y Entrada de datos</h2>
+    <script>
+        let nombre = prompt('Ingresa tu nombre:');
+        let sueldo = prompt('Ingresa tu sueldo:');
+        document.write('Hola ' + nombre + ', tu sueldo es de: ' + sueldo + '<br>');
+    </script>
+    
+    <h2>2. Estructuras secuenciales</h2>
+    <h3>Perímetro de un cuadrado</h3>
+    <script>
+        let lado = parseInt(prompt('Ingrese el lado del cuadrado en cm:'));
+        let perimetro = lado * 4;
+        document.write('El lado del cuadrado es: ' + lado + ' cm<br>');
+        document.write('El perímetro del cuadrado es: ' + perimetro + ' cm<br>');
+    </script>
+    
+    <h3>Suma y multiplicación de cuatro valores</h3>
+    <script>
+        let v1 = parseInt(prompt('Ingrese el valor uno:'));
+        let v2 = parseInt(prompt('Ingrese el valor dos:'));
+        let v3 = parseInt(prompt('Ingrese el valor tres:'));
+        let v4 = parseInt(prompt('Ingrese el valor cuatro:'));
+        let suma = v1 + v2 + v3 + v4;
+        let producto = v1 * v2 * v3 * v4;
+        document.write('La suma es: ' + suma + '<br>');
+        document.write('El producto es: ' + producto + '<br>');
+    </script>
+
+    <h2>3. Estructuras condicionales</h2>
+    <h3>Evaluación de promedio</h3>
+    <script>
+        let nota1 = parseInt(prompt('Ingrese la nota 1:'));
+        let nota2 = parseInt(prompt('Ingrese la nota 2:'));
+        let nota3 = parseInt(prompt('Ingrese la nota 3:'));
+        let promedio = (nota1 + nota2 + nota3) / 3;
+        if (promedio >= 8) {
+            document.write('Promocionado<br>');
+        } else {
+            document.write('No promocionado<br>');
+        }
+    </script>
+    
+    <h3>Número positivo, negativo o cero</h3>
+    <script>
+        let num = parseInt(prompt('Ingrese un número:'));
+        if (num > 0) {
+            document.write('El número es positivo<br>');
+        } else if (num < 0) {
+            document.write('El número es negativo<br>');
+        } else {
+            document.write('El número es cero<br>');
+        }
+    </script>
+
+    <h2>4. Estructuras repetitivas</h2>
+    <h3>While</h3>
+    <script>
+        let contador = 1;
+        let valor = 11;
+        while (contador <= 25) {
+            document.write('Número: ' + contador + ' Valor: ' + valor + '<br>');
+            contador++;
+            valor += 11;
+        }
+    </script>
+
+    <h3>Do/While</h3>
+    <script>
+        let i = 1;
+        do {
+            document.write('Número: ' + i + '<br>');
+            i++;
+        } while (i <= 5);
+    </script>
+
+    <h3>For</h3>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            document.write('Número ' + i + '<br>');
+        }
+    </script>
+
+    <h2>5. Funciones</h2>
+    <h3>Función con parámetros</h3>
+    <script>
+        function menor(a, b, c) {
+            return Math.min(a, b, c);
+        }
+        let n1 = parseInt(prompt('Ingrese el primer número:'));
+        let n2 = parseInt(prompt('Ingrese el segundo número:'));
+        let n3 = parseInt(prompt('Ingrese el tercer número:'));
+        document.write('El menor número es: ' + menor(n1, n2, n3) + '<br>');
+    </script>
+
+    <h2>6. Switch</h2>
+    <script>
+        let palabra = prompt('Ingrese una palabra: casa, mesa, perro, gato');
+        switch (palabra) {
+            case 'casa':
+                document.write('house<br>');
+                break;
+            case 'mesa':
+                document.write('table<br>');
+                break;
+            case 'perro':
+                document.write('dog<br>');
+                break;
+            case 'gato':
+                document.write('cat<br>');
+                break;
+            default:
+                document.write('Palabra no reconocida<br>');
+        }
+    </script>
+
+    <h2>7. Clase Date</h2>
+    <script>
+        let hoy = new Date();
+        document.write('Hoy es: ' + hoy.toDateString() + '<br>');
+    </script>
+
+    <h2>8. Arrays</h2>
+    <h3>Métodos básicos</h3>
+    <script>
+        let frutas = ['manzana', 'pera', 'uva'];
+        frutas.push('naranja');
+        document.write('Frutas: ' + frutas.join(', ') + '<br>');
+        frutas.pop();
+        document.write('Frutas después de pop: ' + frutas.join(', ') + '<br>');
+    </script>
+
+    <h2>9. Eventos</h2>
+    <h3>OnClick</h3>
+    <button onclick="alert('¡Hola!')">Haz clic aquí</button>
+</body>
+</html>
